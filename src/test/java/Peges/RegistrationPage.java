@@ -5,6 +5,7 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.BeforeAll;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -22,7 +23,8 @@ public class RegistrationPage {
             currentAddress = $("#currentAddress"),
             stateInput = $("#state input"),
             cityInput = $("#city input"),
-            submitClick = $("#submit");
+            submitClick = $("#submit"),
+            checkResult = $(".table-responsive");
     CalendarComponent calendarComponent = new CalendarComponent();
 
     public RegistrationPage openPage() {
@@ -94,11 +96,11 @@ public class RegistrationPage {
         submitClick.click();
         return this;
     }
+
+    public RegistrationPage setcheckResult (String key,String value){
+        $(".table-responsive").$(byText(key)).parent().shouldHave(text(value));
+        return this;
+    }
+
 }
-
-    //public RegistrationPage cheeckResult (String key,String value){
-        //submit.se(value).click();
-        //return this;}
-
-
 

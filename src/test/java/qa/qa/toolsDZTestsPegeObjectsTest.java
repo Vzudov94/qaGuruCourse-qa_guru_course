@@ -27,14 +27,23 @@ public class toolsDZTestsPegeObjectsTest {
         .setLastName("Zudov")
         .setEmail("vzudov@samokat.ru")
         .setGenter("Male")
-        .setUserNumberInput("89065058712")
+        .setUserNumberInput("9065058713")
         .setDateOfBirth ( "21",  "March",  "1998")
         .setSubjectsInput ("Commerce")
         .setHobbiesWrapper ("Sports")
         .setCurrentAddress ("Msk")
         .setStateInput ("Rajasthan")
         .setCityInput("Jaiselmer")
-        .setSubmitClick("submit");
+        .setSubmitClick("submit")
+        .setcheckResult("Student Name","Vova Zudov")
+        .setcheckResult("Student Email","vzudov@samokat.ru")
+        .setcheckResult("Gender","Male")
+        .setcheckResult("Mobile","9065058713")
+        .setcheckResult("Date of Birth","21 March,1998")
+        .setcheckResult("Subjects","Commerce")
+        .setcheckResult("Hobbies","Sports")
+        .setcheckResult("Address","Msk")
+        .setcheckResult("State and City","Rajasthan Jaiselmer");
     }
 }
 
