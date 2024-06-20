@@ -1,10 +1,7 @@
-package Peges;
+package guru_qaPagesObject;
 
-import Peges.Components.CalendarComponent;
-import com.codeborne.selenide.Configuration;
+import guru_qaPagesObject.components.CalendarComponent;
 import com.codeborne.selenide.SelenideElement;
-import org.junit.jupiter.api.BeforeAll;
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
@@ -12,10 +9,10 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class RegistrationPage {
 
-    private SelenideElement firstNameInput = $("#firstName"),
+    private final SelenideElement firstNameInput = $("#firstName"),
             lastNameInput = $("#lastName"),
             userEmailinput = $("#userEmail"),
-            genterWrapper = $("#genterWrapper"),
+            genderWrapper = $("#genterWrapper"),
             userNumberInput = $("#userNumber"),
             calendarInput = $("#dateOfBirthInput"),
             subjectsInput = $("#subjectsInput"),
@@ -48,8 +45,8 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage setGenter(String value) {
-        genterWrapper.$(byText(value)).click();
+    public RegistrationPage setGender(String value) {
+        genderWrapper.$(byText(value)).click();
         return this;
     }
 
@@ -92,15 +89,18 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage setSubmitClick(String value) {
+    public RegistrationPage ClickSubmit(String value) {
         submitClick.click();
         return this;
     }
 
-    public RegistrationPage setcheckResult (String key,String value){
+    public RegistrationPage checkResult (String key ,String value){
         $(".table-responsive").$(byText(key)).parent().shouldHave(text(value));
         return this;
     }
 
+    public SelenideElement getCheckResult() {
+        return checkResult;
+    }
 }
 

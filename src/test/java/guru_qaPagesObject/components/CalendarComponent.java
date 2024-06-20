@@ -1,6 +1,4 @@
-package Peges.Components;
-
-import Peges.RegistrationPage;
+package guru_qaPagesObject.components;
 
 import static com.codeborne.selenide.Selenide.$;
 
