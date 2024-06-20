@@ -1,6 +1,6 @@
-package qa.qa;
+package guru_qaTests;
 
-import Peges.RegistrationPage;
+import guru_qaPagesObject.RegistrationPage;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -8,21 +8,11 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class RegistrationTest {
-
-    String firstNameLocator ="#.firstName";
-    @BeforeAll
-    static void beforeAll(){
-        Configuration.browserSize = "1920x1080";
-        //Configuration.baseUrl = "https://demoqa.com/";
-        Configuration.pageLoadStrategy = "eager";
-        Configuration.holdBrowserOpen = true;
-        Configuration.timeout = 9000; //default 4000
-}
+public class RegistrationTests extends TestBase {
 
     @Test
     void succesfulRegistrationTest(){
-        open("https://demoqa.com/automation-practice-form");
+        open("/automation-practice-form");
         new RegistrationPage().setFirstName("Vova");
         new RegistrationPage().setFirstName("Vova");
         $("#lastName").setValue("Zudov");
