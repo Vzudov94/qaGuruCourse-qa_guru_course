@@ -6,7 +6,6 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Link;
 import io.qameta.allure.Story;
 import io.qameta.allure.selenide.AllureSelenide;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -19,6 +18,18 @@ import static org.openqa.selenium.By.linkText;
 public class StepTest {
     private static final String REPOSITORY = "eroshenkoam/allure-example";
     private static final int ISSUE = 80;
+
+    @Test
+    public void testIssueSearch(){
+        SelenideLogger.addListener("allure", new AllureSelenide());
+        open("http://github.com");
+        $(".header-search-button").click();
+        $("#query-builder-test").sendKeys("eroshenkoam/allure-example");
+        $("#query-builder-test").submit();
+        $(linkText("eroshenkoam/allure-example")).click();
+        $("#issues-tab").click();
+        $(withText("#80" )).should(Condition.exist);
+    }
 
     @Test
     @Feature("ISSUE в репозитории")
@@ -42,23 +53,22 @@ public class StepTest {
         step("Открываем таб issues", () -> {
             $("#issues-tab").click();
         });
-        step("проверяем наличие issues с номером" + ISSUE, () -> {
+        step("Проверяем наличие issues с номером" + ISSUE, () -> {
             $(withText("#" + ISSUE)).should(Condition.exist);
         });
     }
 
 
-    @Disabled
     @Test
     public void testAnnotatedStep() {
         SelenideLogger.addListener("allure", new AllureSelenide());
         WebSteps steps = new WebSteps();
 
-        steps.openMainPage();
-        steps.searchForRepository(REPOSITORY);
-        steps.clickRepositoryLink(REPOSITORY);
-        steps.openIssuesTab();
-        steps.shouldSeeIssuesWithNumber(ISSUE);
+        steps.openMainPage()
+                .searchForRepository(REPOSITORY)
+                .clickRepositoryLink(REPOSITORY)
+                .openIssuesTab()
+                .shouldSeeIssuesWithNumber(ISSUE);
     }
 
 }
