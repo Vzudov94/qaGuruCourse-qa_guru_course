@@ -1,19 +1,28 @@
 package guru.qa.tests;
 
-import guru.qa.pages.RegistrationPage;
+import helpers.Attach;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
-public class RegistrationTests extends TestBase {
+public class RegistrationRemoteTests extends TestBase {
+    @AfterEach
+    void addAttachments() {
+        Attach.screenshots("Last screenshots");
+        Attach.pageSource();
+        Attach.browserConsologLogs();
+        Attach.addVideo();
+    }
+
 
     @Test
-    void succesfulRegistrationTest(){
+    @Tag("testRemote")
+    void remoteTests() {
         open("/automation-practice-form");
-        new RegistrationPage().setFirstName("Vova");
-        new RegistrationPage().setFirstName("Vova");
+        $x("//*[@id='firstName']").setValue("Vova");
         $("#lastName").setValue("Zudov");
         $("#userEmail").setValue("vzudov@samokat.ru");
         $("#genterWrapper").$(byText("Male")).click();
@@ -24,7 +33,6 @@ public class RegistrationTests extends TestBase {
         $(".react-datepicker__day--021:not(.react-datepicker__day--outside-month)").click();
         $("#subjectsInput").setValue("Commerce").pressEnter();
         $("#hobbiesWrapper").$(byText("Sports")).click();
-        //$("#uploadPicture").uploadFromClasspath("img/1.png");
         $("#currentAddress").setValue("Msk");
         $("#state input").setValue("Rajasthan").pressEnter();
         $("#city input").setValue("Jaiselmer").pressEnter();

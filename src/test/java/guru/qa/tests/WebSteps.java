@@ -1,7 +1,7 @@
 package guru.qa.tests;
 
-
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Selectors.withText;
@@ -10,19 +10,20 @@ import static com.codeborne.selenide.Selenide.open;
 import static org.openqa.selenium.By.linkText;
 
 public class WebSteps {
+    private final String GITHUB_URL = "http://github.com";
+    private final SelenideElement searchInput = $(".header-search-button"),
+    digSearchInput=$("#query-builder-test");
     @Step("Открываем главную страницу")
     public WebSteps openMainPage() {
-        open("http://github.com");
+        open(GITHUB_URL);
         return this;
     }
 
     @Step("Ищем репозиторий {repo}")
     public WebSteps searchForRepository(String repo) {
-        $(".header-search-button").click();
-        $("#query-builder-test").sendKeys(repo);
-        $("#query-builder-test").submit();
+        searchInput.click();
+        digSearchInput.setValue(repo).submit();
         return this;
-
     }
 
     @Step("Кликаем по ссылке репозитория {repo}")

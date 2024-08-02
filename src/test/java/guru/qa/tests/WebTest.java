@@ -21,7 +21,6 @@ public class WebTest extends TestBase {
         open("https://duckduckgo.com/");
     }
 
-
     @ValueSource(strings = {
             "Car", "Potato"
     })
@@ -52,4 +51,3 @@ public class WebTest extends TestBase {
                 .shouldHave(attribute("data-link", expectedLink));
     }
 }
-
