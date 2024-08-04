@@ -23,7 +23,7 @@ public class StepTest {
     @Owner("vzudov")
     @Severity(SeverityLevel.BLOCKER)
     @Link(value = "Testing")
-    @DisplayName("Создание ISSUE для авторизованного пользователя")
+    @DisplayName("Создание ISSUE для авторизованного пользователя (Selenide)")
     public void testIssueSearch() {
         SelenideLogger.addListener("allure", new AllureSelenide());
         open("http://github.com");
@@ -40,7 +40,7 @@ public class StepTest {
     @Owner("vzudov")
     @Severity(SeverityLevel.BLOCKER)
     @Link(value = "Testing")
-    @DisplayName("Создание ISSUE для авторизованного пользователя")
+    @DisplayName("Создание ISSUE для авторизованного пользователя (Lambda)")
     public void testLambdaStep() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
@@ -71,7 +71,7 @@ public class StepTest {
     @Owner("vzudov")
     @Severity(SeverityLevel.BLOCKER)
     @Link(value = "Testing")
-    @DisplayName("Создание ISSUE для авторизованного пользователя")
+    @DisplayName("Создание ISSUE для авторизованного пользователя (Annotated)")
     public void testAnnotatedStep() {
         SelenideLogger.addListener("allure", new AllureSelenide());
         WebSteps gitHubsteps = new WebSteps();
