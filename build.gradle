@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id 'io.qameta.allure' version '2.11.2'
+    id 'io.qameta.allure' version '2.12.0'
 }
 
 group = 'qa.qa'
@@ -43,8 +43,8 @@ tasks.withType(Test) {
     }
 }
 
-task testRemote_test(type: Test) {
+task simple_test(type: Test) {
     useJUnitPlatform {
-        includeTags("testRemote")
+        includeTags("simple")
     }
 }

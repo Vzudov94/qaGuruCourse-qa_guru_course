@@ -19,7 +19,7 @@ public class RegistrationRemoteTests extends TestBase {
 
 
     @Test
-    @Tag("testRemote")
+    @Tag("simple")
     void remoteTests() {
         open("/automation-practice-form");
         $x("//*[@id='firstName']").setValue("Vova");
