@@ -17,7 +17,6 @@ public class RegistrationRemoteTests extends TestBase {
         Attach.addVideo();
     }
 
-
     @Test
     @Tag("simple")
     void remoteTests() {
@@ -40,6 +39,3 @@ public class RegistrationRemoteTests extends TestBase {
 
     }
 }
-
-
-
