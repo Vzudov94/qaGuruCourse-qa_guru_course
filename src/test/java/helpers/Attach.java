@@ -13,8 +13,8 @@ import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static org.openqa.selenium.logging.LogType.BROWSER;
 
 public class Attach {
-    @Attachment(value = "(attachName]", type = "image/png")
-    public static byte[] screenshots(String attachName) {
+    @Attachment(value = "(Lastscreenshot]", type = "image/png")
+    public static byte[] screenshots(String Lastscreenshot) {
         return ((TakesScreenshot) getWebDriver()).getScreenshotAs(OutputType.BYTES);
     }
 
@@ -23,8 +23,8 @@ public class Attach {
         return getWebDriver().getPageSource().getBytes(StandardCharsets.UTF_8);
     }
 
-    @Attachment(value = "(attachName]", type = "text/plain")
-    public static String attachAsText(String attachName, String message) {
+    @Attachment(value = "(TextMessage]", type = "text/plain")
+    public static String attachAsText(String Textmessage, String message) {
         return message;
     }
 
@@ -43,7 +43,7 @@ public class Attach {
     }
 
     public static URL getVideoUrl() {
-        String videoUrt = "httos://selenoid.autotests.cloud/video/" + sessionId() + ".mp4";
+        String videoUrt = "https://selenoid.autotests.cloud/video/" + sessionId() + ".mp4";
         try {
             return new URL(videoUrt);
         } catch (MalformedURLException e) {
