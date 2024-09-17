@@ -8,26 +8,26 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class AvailabilityTextPage {
     private final SelenideElement
-            clickTabFizFace = $(byText("Проверка физлиц")),
-            clickTransitionSection = $(byText("Частным лицам")),
+            tabFizFace = $(byText("Проверка физлиц")),
+            tabPivateFace = $(byText("Частным лицам")),
             scrollElement = $(byText("Покупаете недвижимость или авто")),
-            checkAvailabilityText = $(byText("Покупаете недвижимость или авто"));
+            textBuyRealty = $(byText("Покупаете недвижимость или авто"));
 
-    public AvailabilityTextPage tabFizFace() {
-        clickTabFizFace.click();
+    public AvailabilityTextPage clickTabFizFace() {
+        tabFizFace.click();
         return this;
     }
 
-    public AvailabilityTextPage transitionSection() {
-        clickTransitionSection.click();
+    public AvailabilityTextPage clickTabPivateFace() {
+        tabPivateFace.click();
         return this;
     }
     public AvailabilityTextPage goToScrollElement() {
         scrollElement.scrollTo();
         return this;
     }
-    public AvailabilityTextPage availabilityText() {
-        checkAvailabilityText.shouldBe(exist);
+    public AvailabilityTextPage availabilityTextBuyRealty() {
+        textBuyRealty.shouldBe(exist);
         return this;
     }
 }
