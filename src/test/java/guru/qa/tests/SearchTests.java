@@ -15,7 +15,7 @@ import static com.codeborne.selenide.logevents.SelenideLogger.step;
 @Feature("Проверка корректности поискового запроса на Rusprofile")
 @DisplayName("Проверка корректности поискового запроса на Rusprofile")
 @TmsLink("HOMEWORK-1")
-@Tag("Rusprofile")
+@Tag("rusprofile")
 public class SearchTests extends TestBaseRusprofile {
     MainPage mainPage = new MainPage();
     SearchPage searchPage = new SearchPage();

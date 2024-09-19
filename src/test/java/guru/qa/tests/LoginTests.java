@@ -16,7 +16,7 @@ import static com.codeborne.selenide.logevents.SelenideLogger.step;
 @Feature("Проверка отображения окна авторизации Rusprofile")
 @DisplayName("Проверка отображения окна авторизации Rusprofile")
 @TmsLink("HOMEWORK-1")
-@Tag("Rusprofile")
+@Tag("rusprofile")
 public class LoginTests extends TestBaseRusprofile {
     AuthModal authPage = new AuthModal();
     MainPage mainPage = new MainPage();

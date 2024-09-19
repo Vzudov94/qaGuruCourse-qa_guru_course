@@ -15,7 +15,7 @@ import static com.codeborne.selenide.logevents.SelenideLogger.step;
 @Feature("Проверка названия заголовка раздела на Rusprofile")
 @DisplayName("Проверка названия заголовка раздела на Rusprofile")
 @TmsLink("HOMEWORK-1")
-@Tag("Rusprofile")
+@Tag("rusprofile")
 public class AvailabilityTextTests extends TestBaseRusprofile {
     MainPage mainPage = new MainPage();
     AvailabilityTextPage availabilityTextPage = new AvailabilityTextPage();

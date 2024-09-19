@@ -43,8 +43,8 @@ tasks.withType(Test) {
     }
 }
 
-task Rusprofile(type: Test) {
+task rusprofile_test(type: Test) {
     useJUnitPlatform {
-        includeTags("Rusprofile")
+        includeTags("rusprofile")
     }
 }
