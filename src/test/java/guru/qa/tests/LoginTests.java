@@ -146,4 +146,5 @@ public class LoginTests extends TestBaseRusprofile {
         });
 
     }
+
 }
