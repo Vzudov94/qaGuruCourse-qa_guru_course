@@ -16,7 +16,7 @@ public class AuthModal {
             inputEmail = $(By.name("fome_email")),
             inputPass = $(By.name("form_pass")),
             registrationBtn = $("[class='btn btn-blue btn-wide']"),
-            checkboxСondition = $("[class='checkbox-label'"),
+            checkboxCondition = $("[class='checkbox-label'"),
             examinationResault = $(byText("Вы зарегистрированы")),
             gateBtn = $("[class='btn btn-blue']"),
             failedPass = $(byText("Неправильный пароль. Попробуйте еще раз.")),
@@ -54,7 +54,7 @@ public class AuthModal {
     }
 
     public AuthModal clickСheckboxСondition() {
-        checkboxСondition.click();
+        checkboxCondition.click();
         return this;
     }
 
@@ -63,17 +63,17 @@ public class AuthModal {
         return this;
     }
 
-    public AuthModal сlickGateBtn() {
+    public AuthModal clickSubmitBtn() {
         gateBtn.click();
         return this;
     }
 
-    public AuthModal examinationFailedPass() {
+    public AuthModal checkFailedPass() {
         failedPass.shouldBe(exist);
         return this;
     }
 
-    public AuthModal examinationFailedEmail() {
+    public AuthModal checkFailedEmail() {
         failedEmail.shouldBe(exist);
         return this;
     }

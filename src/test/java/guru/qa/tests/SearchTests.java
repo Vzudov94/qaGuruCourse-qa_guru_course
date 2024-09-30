@@ -28,11 +28,11 @@ public class SearchTests extends TestBaseRusprofile {
         });
 
         step("В поисковом запросе вписываем критерий поиска", () -> {
-            searchPage.setInputSearch("Оценка+");
+            searchPage.fillSearchInput("Оценка+");
         });
 
         step("Проверка результата поискового запроса", () -> {
-            searchPage.checkExaminationResult("Оценка+");
+            searchPage.requestVerification("Оценка+");
         });
     }
 }

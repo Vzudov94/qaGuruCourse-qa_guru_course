@@ -83,7 +83,7 @@ public class LoginTests extends TestBaseRusprofile {
         });
 
         step("Нажимаем на кнопку Войти", () -> {
-            authPage.сlickGateBtn();
+            authPage.clickSubmitBtn();
         });
     }
 
@@ -108,11 +108,11 @@ public class LoginTests extends TestBaseRusprofile {
         });
 
         step("Нажимаем на кнопку Войти", () -> {
-            authPage.сlickGateBtn();
+            authPage.clickSubmitBtn();
         });
 
         step("Видим сообщение ошибки", () -> {
-            authPage.examinationFailedPass();
+            authPage.checkFailedPass();
         });
 
     }
@@ -138,11 +138,11 @@ public class LoginTests extends TestBaseRusprofile {
         });
 
         step("Нажимаем на кнопку Войти", () -> {
-            authPage.сlickGateBtn();
+            authPage.clickSubmitBtn();
         });
 
         step("Видим сообщение ошибки", () -> {
-            authPage.examinationFailedEmail();
+            authPage.checkFailedEmail();
         });
 
     }
