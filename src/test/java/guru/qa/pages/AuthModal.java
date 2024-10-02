@@ -17,65 +17,54 @@ public class AuthModal {
             inputPass = $(By.name("form_pass")),
             registrationBtn = $("[class='btn btn-blue btn-wide']"),
             checkboxCondition = $("[class='checkbox-label'"),
-            examinationResault = $(byText("Вы зарегистрированы")),
+            examinationResult = $(byText("Вы зарегистрированы")),
             gateBtn = $("[class='btn btn-blue']"),
             failedPass = $(byText("Неправильный пароль. Попробуйте еще раз.")),
             failedEmail = $(byText("Пользователь не найден"));
 
 
-    public AuthModal clickLoginBtn() {
+    public void clickLoginBtn() {
         loginBtn.click();
-        return this;
     }
 
-    public AuthModal registrationClick() {
+    public void registrationClick() {
         registrationClick.click();
-        return this;
     }
 
-    public AuthModal setName(String value) {
+    public void setName(String value) {
         inputName.setValue(value);
-        return this;
     }
 
-    public AuthModal setEmail(String value) {
+    public void setEmail(String value) {
         inputEmail.setValue(value);
-        return this;
     }
 
-    public AuthModal setPass(String value) {
+    public void setPass(String value) {
         inputPass.setValue(value);
-        return this;
     }
 
-    public AuthModal clickRegistrationBtn() {
+    public void clickRegistrationBtn() {
         registrationBtn.click();
-        return this;
     }
 
-    public AuthModal clickСheckboxСondition() {
+    public void clickCheckboxCondition() {
         checkboxCondition.click();
-        return this;
     }
 
-    public AuthModal examinationResaultCheck() {
-        examinationResault.shouldBe(exist);
-        return this;
+    public void examinationResultCheck() {
+        examinationResult.shouldBe(exist);
     }
 
-    public AuthModal clickSubmitBtn() {
+    public void clickSubmitBtn() {
         gateBtn.click();
-        return this;
     }
 
-    public AuthModal checkFailedPass() {
+    public void checkFailedPass() {
         failedPass.shouldBe(exist);
-        return this;
     }
 
-    public AuthModal checkFailedEmail() {
+    public void checkFailedEmail() {
         failedEmail.shouldBe(exist);
-        return this;
     }
 
 }

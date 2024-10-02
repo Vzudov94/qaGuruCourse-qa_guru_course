@@ -22,7 +22,7 @@ public class AvailabilityTextTests extends TestBaseRusprofile {
 
 
     @Test
-    @DisplayName("Проверка правильности поискового запроса")
+    @DisplayName("Проверка названия заголовка")
     void checkAvailabilityTextTest() {
 
         step("Открываем главную страницу", () -> {
@@ -38,7 +38,7 @@ public class AvailabilityTextTests extends TestBaseRusprofile {
         });
 
         step("Прокрутить страницу до нужного раздела", () -> {
-            availabilityTextPage.goToScrollElement();
+            availabilityTextPage.moveScroll();
         });
 
         step("Убедиться, что есть раздел Покупаете недвижимость или авто", () -> {

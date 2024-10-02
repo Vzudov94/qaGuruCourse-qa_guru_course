@@ -10,24 +10,19 @@ public class AvailabilityTextPage {
     private final SelenideElement
             tabFizFace = $(byText("Проверка физлиц")),
             tabPivateFace = $(byText("Частным лицам")),
-            scrollElement = $(byText("Покупаете недвижимость или авто")),
             textBuyRealty = $(byText("Покупаете недвижимость или авто"));
 
-    public AvailabilityTextPage clickTabFizFace() {
+    public void clickTabFizFace() {
         tabFizFace.click();
-        return this;
     }
 
-    public AvailabilityTextPage clickTabPivateFace() {
+    public void clickTabPivateFace() {
         tabPivateFace.click();
-        return this;
     }
-    public AvailabilityTextPage goToScrollElement() {
-        scrollElement.scrollTo();
-        return this;
+    public void moveScroll() {
+        textBuyRealty.scrollTo();
     }
-    public AvailabilityTextPage availabilityTextBuyRealty() {
+    public void availabilityTextBuyRealty() {
         textBuyRealty.shouldBe(exist);
-        return this;
     }
 }

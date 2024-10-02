@@ -11,13 +11,11 @@ public class SearchPage {
             inputSearch = $("[class='index-search-input']"),
             examinationResult = $(byText("\"Оценка+\""));
 
-    public SearchPage fillSearchInput(String value) {
+    public void fillSearchInput(String value) {
         inputSearch.setValue(value).pressEnter();
-        return this;
     }
 
-    public SearchPage requestVerification(String value) {
+    public void requestVerification(String value) {
         examinationResult.shouldHave(text(value));
-        return this;
     }
 }

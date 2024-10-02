@@ -50,7 +50,7 @@ public class LoginTests extends TestBaseRusprofile {
         });
 
         step("Принять условия сервиса, нажать на чекбокс", () -> {
-            authPage.clickСheckboxСondition();
+            authPage.clickCheckboxCondition();
         });
 
         step("Нажать на кнопку Зарегистрироваться", () -> {
@@ -58,7 +58,7 @@ public class LoginTests extends TestBaseRusprofile {
         });
 
         step("Видим сообщение об успешной регистрации", () -> {
-            authPage.examinationResaultCheck();
+            authPage.examinationResultCheck();
         });
     }
 
