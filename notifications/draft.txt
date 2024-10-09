@@ -1,7 +1,7 @@
 7476054180:AAE2bJbIqagVN5vy4oMbS8Z3-Yhx3Kghp7Q
 @qa_guru_24_zud_bot
 https://api.telegram.org/bot7476054180:AAE2bJbIqagVN5vy4oMbS8Z3-Yhx3Kghp7Q/getUpdates
--546188352861883528
-curl -X POST -H 'Content-Type: application/json' -d {"chat_id": "-5461883528", "text": "This is a test from qa.guru")' https://api.telegram.org/bot7476054180:AAE2bJbIqagVN5vy4oMbS8Z3-Yhx3Kghp7Q/sendMessage
+-1002229372681
+curl -X POST -H 'Content-Type: application/json' -d {"chat_id": "-1002229372681", "text": "This is a test from qa.guru")' https://api.telegram.org/bot7476054180:AAE2bJbIqagVN5vy4oMbS8Z3-Yhx3Kghp7Q/sendMessage
 
 java "-DconfigFile=notifications/config.json" -jar notifications/allure-notifications-4.6.1.jar
