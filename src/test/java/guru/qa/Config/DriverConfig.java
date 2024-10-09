@@ -1,4 +1,4 @@
-package Config;
+package guru.qa.Config;
 
 import org.aeonbits.owner.Config;
 @Config.LoadPolicy(Config.LoadType.MERGE)

@@ -1,9 +1,9 @@
 {
   "base": {
-    "project": "some project",
+    "project": "${JOB_NAME}",
     "environment": "some env",
-    "comment": "some comment",
-    "reportLink": "https://jenkins.autotests.cloud/...",
+    "comment": "Tests were run with parameters: ${BROWSER} ${BROWSER_VERSION}, ${BROWSER_SIZE}",
+    "reportLink": "https://jenkins.autotests.cloud",
     "language": "en",
     "messenger": "telegram",
     "allureFolder": "build/allure-report/",
@@ -11,7 +11,7 @@
   },
   "telegram": {
     "token": "7476054180:AAE2bJbIqagVN5vy4oMbS8Z3-Yhx3Kghp7Q",
-    "chat": "-546188352861883528",
+    "chat": "-100546188352861883528",
     "rplyTo": ""
   }
 }

@@ -19,10 +19,8 @@ public class AvailabilityTextPage {
     public void clickTabPivateFace() {
         tabPivateFace.click();
     }
-    public void moveScroll() {
-        textBuyRealty.scrollTo();
-    }
+
     public void availabilityTextBuyRealty() {
-        textBuyRealty.shouldBe(exist);
+        textBuyRealty.scrollIntoView(true).shouldBe(exist);
     }
 }

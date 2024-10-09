@@ -1,10 +1,10 @@
 package guru.qa.tests;
 
-import Config.DriverConfig;
+import guru.qa.Config.DriverConfig;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import helpers.Attach;
+import guru.qa.helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
@@ -36,11 +36,10 @@ public class TestBaseRusprofile {
 
     @AfterEach
     void addAttachments() {
-        Attach.screenshots("Last screenshots");
+        Attach.screenshotAs("LastScreenshots");
         Attach.pageSource();
-        Attach.browserConsologLogs();
+        Attach.browserConsoleLogs();
         Attach.addVideo();
         Selenide.closeWebDriver();
-
     }
 }

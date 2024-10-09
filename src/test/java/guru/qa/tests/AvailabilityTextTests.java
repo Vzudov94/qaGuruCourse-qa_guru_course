@@ -37,10 +37,6 @@ public class AvailabilityTextTests extends TestBaseRusprofile {
             availabilityTextPage.clickTabPivateFace();
         });
 
-        step("Прокрутить страницу до нужного раздела", () -> {
-            availabilityTextPage.moveScroll();
-        });
-
         step("Убедиться, что есть раздел Покупаете недвижимость или авто", () -> {
             availabilityTextPage.availabilityTextBuyRealty();
         });

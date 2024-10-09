@@ -1,7 +1,9 @@
 package guru.qa.pages;
 
 import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.WebDriverRunner;
 import org.openqa.selenium.By;
+import org.openqa.selenium.interactions.Actions;
 
 import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Selectors.byText;
@@ -11,16 +13,16 @@ public class AuthModal {
     private final SelenideElement
 
             loginBtn = $(byText("Войти")),
-            registrationClick = $(byText("Зарегистрируйтесь")),
+            clickRegistrationLink = $(byText("Зарегистрируйтесь")),
             inputName = $("input[placeholder='Ваше имя']"),
             inputEmail = $(By.name("fome_email")),
-            inputPass = $(By.name("form_pass")),
+            inputPassword = $(By.name("form_pass")),
             registrationBtn = $("[class='btn btn-blue btn-wide']"),
-            checkboxCondition = $("[class='checkbox-label'"),
-            examinationResult = $(byText("Вы зарегистрированы")),
-            gateBtn = $("[class='btn btn-blue']"),
-            failedPass = $(byText("Неправильный пароль. Попробуйте еще раз.")),
-            failedEmail = $(byText("Пользователь не найден"));
+            checkboxCondition =$(".checkbox-label"),
+            successRegistrationMessage = $(byText("Вы зарегистрированы")),
+            clickSubmitBtn = $("[class='btn btn-blue']"),
+            failedPasswordMessage = $(byText("Неправильный пароль. Попробуйте еще раз.")),
+            failedEmailMessage = $(byText("Пользователь не найден"));
 
 
     public void clickLoginBtn() {
@@ -28,7 +30,7 @@ public class AuthModal {
     }
 
     public void registrationClick() {
-        registrationClick.click();
+        clickRegistrationLink.click();
     }
 
     public void setName(String value) {
@@ -39,8 +41,8 @@ public class AuthModal {
         inputEmail.setValue(value);
     }
 
-    public void setPass(String value) {
-        inputPass.setValue(value);
+    public void setPassword(String value) {
+        inputPassword.setValue(value);
     }
 
     public void clickRegistrationBtn() {
@@ -48,23 +50,23 @@ public class AuthModal {
     }
 
     public void clickCheckboxCondition() {
-        checkboxCondition.click();
+        new Actions(WebDriverRunner.getWebDriver()).moveToElement($(checkboxCondition).toWebElement(), 10, 10) .click() .build() .perform();
     }
 
-    public void examinationResultCheck() {
-        examinationResult.shouldBe(exist);
+    public void successRegistrationMessageCheck() {
+        successRegistrationMessage.shouldBe(exist);
     }
 
     public void clickSubmitBtn() {
-        gateBtn.click();
+        clickSubmitBtn.click();
     }
 
     public void checkFailedPass() {
-        failedPass.shouldBe(exist);
+        failedPasswordMessage.shouldBe(exist);
     }
 
     public void checkFailedEmail() {
-        failedEmail.shouldBe(exist);
+        failedEmailMessage.shouldBe(exist);
     }
 
 }

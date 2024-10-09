@@ -22,7 +22,6 @@ public class LoginTests extends TestBaseRusprofile {
     MainPage mainPage = new MainPage();
 
     @Test
-    @Disabled
     @DisplayName("Регистрация на Rusprofile")
     void registrationTest() {
         step("Открываем главную страницу", () -> {
@@ -46,7 +45,7 @@ public class LoginTests extends TestBaseRusprofile {
         });
 
         step("Вводим валидный пароль", () -> {
-            authPage.setPass("QdysME4HFA12");
+            authPage.setPassword("QdysME4HFA12");
         });
 
         step("Принять условия сервиса, нажать на чекбокс", () -> {
@@ -58,7 +57,7 @@ public class LoginTests extends TestBaseRusprofile {
         });
 
         step("Видим сообщение об успешной регистрации", () -> {
-            authPage.examinationResultCheck();
+            authPage.successRegistrationMessageCheck();
         });
     }
 
@@ -79,7 +78,7 @@ public class LoginTests extends TestBaseRusprofile {
         });
 
         step("Вводим валидный пароль", () -> {
-            authPage.setPass("QdysME4HFA12");
+            authPage.setPassword("QdysME4HFA12");
         });
 
         step("Нажимаем на кнопку Войти", () -> {
@@ -104,7 +103,7 @@ public class LoginTests extends TestBaseRusprofile {
         });
 
         step("Вводим невалидный пароль", () -> {
-            authPage.setPass("QdysME4HFA14");
+            authPage.setPassword("QdysME4HFA14");
         });
 
         step("Нажимаем на кнопку Войти", () -> {
@@ -114,7 +113,6 @@ public class LoginTests extends TestBaseRusprofile {
         step("Видим сообщение ошибки", () -> {
             authPage.checkFailedPass();
         });
-
     }
 
     @Test
@@ -134,7 +132,7 @@ public class LoginTests extends TestBaseRusprofile {
         });
 
         step("Вводим валидный пароль", () -> {
-            authPage.setPass("QdysME4HFA12");
+            authPage.setPassword("QdysME4HFA12");
         });
 
         step("Нажимаем на кнопку Войти", () -> {
@@ -144,7 +142,5 @@ public class LoginTests extends TestBaseRusprofile {
         step("Видим сообщение ошибки", () -> {
             authPage.checkFailedEmail();
         });
-
     }
-
 }
