@@ -3,7 +3,7 @@
     "project": "${JOB_NAME}",
     "environment": "some env",
     "comment": "Tests were run with parameters: ${BROWSER} ${BROWSER_VERSION}, ${BROWSER_SIZE}",
-    "reportLink": "https://jenkins.autotests.cloud/job/Vzudov94.qaGuruCourse-qa_guru_course.rusprofile/",
+    "reportLink": "https://jenkins.autotests.cloud",
     "language": "en",
     "allureFolder": "allure-report/",
     "enableChart": true
