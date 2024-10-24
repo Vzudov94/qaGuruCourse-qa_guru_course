@@ -60,3 +60,55 @@
 - BROWSER_VERSION (версия браузера, по умолчанию 100.0)
 - BROWSER_SIZE (размер окна браузера, по умолчанию 1920x1080)
 - REMOTE_URL (адрес удаленного сервера для запуска)
+
+## <a href="https://www.jenkins.io/"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" alt="jenkins" width="40" height="40"/> </a> Сборка в Jenkins
+<p align="center">
+<img title="Jenkins Build" src="media/screen/JenkinsBuild.png">
+</p>
+
+После выполнения сборки, в блоке Build History напротив номера сборки появятся значки Allure Report и Allure TestOps, при клике на которые откроется страница с сформированным html-отчетом и тестовой документацией соответственно.
+
+## <a href="https://allurereport.org/"> <img src="https://avatars.githubusercontent.com/u/5879127?s=200&v=4" alt="allure report" width="40" height="40"/> </a> Пример Allure-отчета
+### Overview
+
+<p align="center">
+<img title="Allure Overview" src="media/screen/allureReport.png">
+</p>
+
+## <a href="https://docs.qameta.io/allure-testops/"> <img src="https://plugins.jetbrains.com/files/12513/451639/icon/pluginIcon.svg" alt="allure testOps" width="35" height="35"/> </a> Интеграция с Allure TestOps
+
+Выполнена интеграция сборки <code>Jenkins</code> с <code>Allure TestOps</code>.
+Результат выполнения автотестов отображается в <code>Allure TestOps</code>
+На Dashboard в <code>Allure TestOps</code> отображена статистика пройденных тестов.
+
+<p align="center">
+<img title="Allure TestOps DashBoard" src="media/screen/allureAutotestCloud.png">
+</p>
+
+### Результат выполнения автотеста в прогоне
+
+<p align="center">
+<img title="Test Results in Alure TestOps" src="media/screen/allureTestOpsDetail.png">
+</p>
+
+<a id="jira"></a>
+## <img width="4%" style="vertical-align:middle" title="Jira" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original-wordmark.svg"> </a> Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-1131"> Jira </a>
+
+Реализована интеграция ```Allure TestOps``` с ```Jira```, в тикете отображается, какие тест-кейсы были написаны в рамках задачи и результат их прогона.
+
+<p align="center">
+<img title="Jira Task" src="media/screen/Jira.png">
+</p>
+
+И наоборот, у тест кейсов отображается ссылка на тикет в Jira, во вкладке ```Test cases```.
+
+<p align="center">
+<img title="Allure TestOps test case" src="media/screen/allureTestOpsTestCase.png">
+</p>
+
+## Видео примера запуска тестов в Selenoid
+
+К каждому тесту в отчете прилагается видео прогона.
+<p align="center">
+  <img title="Selenoid Video" src="media/video.gif">
+</p>
