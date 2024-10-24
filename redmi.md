@@ -54,6 +54,20 @@
 - - Проверка названия заголовка раздела на Rusprofile
 - - Проверка правильности поискового запроса
 
+<a id="console"></a>
+## :arrow_forward: Запуск автотестов
+
+### Запуск тестов из терминала
+
+Локальный запуск:
+```
+gradle clean rusprofile 
+```
+Удаленный запуск:
+```
+clean rusprofile -Dbrowser=${BROWSER} -DbrowserVersion=${BROWSER_VERSION} -DbrowserSize=${BROWSER_SIZE}  -DbrowserRemoteUrl=${BROWSER_REMOTE_URL}
+```
+
 Для запуска сборки необходимо перейти в раздел ```Build with Parameters```, выбрать необходимые параметры и нажать кнопку ```Build```.
 #### :hammer_and_wrench:: Параметры сборки в Jenkins:
 - BROWSER (браузер: chrome/firefox, по умолчанию chrome)
@@ -110,5 +124,5 @@
 
 К каждому тесту в отчете прилагается видео прогона.
 <p align="center">
-  <img title="Selenoid Video" src="media/video.gif">
+  <img title="Selenoid Video" src="media/screen/video.gif">
 </p>
