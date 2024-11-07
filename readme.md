@@ -112,7 +112,7 @@ clean rusprofile -Dbrowser=${BROWSER} -DbrowserVersion=${BROWSER_VERSION} -Dbrow
 </p>
 
 <a id="jira"></a>
-## <img width="4%" style="vertical-align:middle" title="Jira" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original-wordmark.svg"> </a> Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-1131"> Jira </a>
+## <img width="4%" style="vertical-align:middle" title="Jira" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original-wordmark.svg"> </a> Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-1361"> Jira </a>
 
 Реализована интеграция ```Allure TestOps``` с ```Jira```, в тикете отображается, какие тест-кейсы были написаны в рамках задачи и результат их прогона.
 
