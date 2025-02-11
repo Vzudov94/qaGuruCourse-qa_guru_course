@@ -81,6 +81,11 @@ clean rusprofile -Dbrowser=${BROWSER} -DbrowserVersion=${BROWSER_VERSION} -Dbrow
 <a id="assemblyJenkins"></a>
 ## <a href="https://www.jenkins.io/"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" alt="jenkins" width="40" height="40"/> </a> Сборка в Jenkins
 <p align="center">
+  
+```
+https://jenkins.autotests.cloud/job/Vzudov94.qaGuruCourse-qa_guru_course.rusprofile/
+```
+  
 <img title="Jenkins Build" src="media/screen/JenkinsBuild.png">
 </p>
 
